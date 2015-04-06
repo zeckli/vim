@@ -1,11 +1,18 @@
-" Vundle settings below
+" This vimrc is based on Arch Linux's default vimrc. (/etc/vimrc)
+" Adapted by zeckli
+" GitHub: https://github.com/devforgalaxy/vim/blob/master/vimrc 
+
 set nocompatible
 filetype off
 
+" Vundle: a Vim plugin manager (https://github.com/gmarik/Vundle.vim)
+" Vundle's default settings:
+" set rtp+=~/.vim/bundle/Vundle.vim
+" call vundle#begin()
 set rtp+=/usr/share/vim/vim74/bundle/Vundle.vim/
 call vundle#begin('/usr/share/vim/vim74/bundle/')
 
-" Vundle's plugin list start below
+" Vundle's plugin list 
 Plugin 'gmarik/Vundle.vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'scrooloose/nerdtree'
@@ -29,6 +36,7 @@ runtime! archlinux.vim
 " Or better yet, read /usr/share/vim/vim74/vimrc_example.vim or the vim manual
 " and configure vim to your own liking!
 
+" General settings
 set tabstop=4
 set shiftwidth=4
 set number
