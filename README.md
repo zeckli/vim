@@ -8,6 +8,6 @@ HOW TO USE
 
 TUTORIAL
 --------
-If you want to learn how to configure your vim, you can read my article :
-- <a href="http://hatemegalaxy.blogspot.tw/2015/03/arch-linux-vim-configure-vim-on-arch.html" target="_blank">Configure Vim on Arch Linux</a>
-- <a href="http://hatemegalaxy.blogspot.tw/2015/03/arch-linux-vim-vundle-install-vundle.html" target="_blank">Install Vundle for Vim on Arch Linux</a>
+If you want to learn how to customize your vim, you can read my article :
+- <a href="http://hatemegalaxy.blogspot.tw/2015/03/arch-linux-vim-configure-vim-on-arch.html" target="_blank">Configure Vim</a>
+- <a href="http://hatemegalaxy.blogspot.tw/2015/03/arch-linux-vim-vundle-install-vundle.html" target="_blank">Install a plugin manager for Vim</a>
