@@ -4,7 +4,7 @@ This repository contains my vimrc and other useful stuff for vim editor.
 
 HOW TO USE
 ----------
-1. Get the vimrc and put it into your ~/.vimrc ( or /etc/vimrc )
+1. Get the vimrc and replace your ~/.vimrc ( or /etc/vimrc )
 
 TUTORIAL
 --------
