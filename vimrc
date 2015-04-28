@@ -1,5 +1,5 @@
 " This vimrc is based on Arch Linux's default vimrc. (/etc/vimrc)
-" Adapted by zeckli
+" Adapted by weili
 " GitHub: https://github.com/devforgalaxy/vim/blob/master/vimrc 
 
 set nocompatible
