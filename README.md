@@ -1,15 +1,14 @@
-Vim
-===
-This repository contains my vimrc and other useful stuff for vim editor.
+# Vim
+This repository contains various vimrc files and other useful stuff about Vim editor.
 
-HOW TO USE
-----------
-1. Get the vimrc and replace your ~/.vimrc ( or /etc/vimrc )
+## Usage
+Get the vimrc that suit your working environment, and replace your ~/.vimrc ( or /etc/vimrc )
 
-TUTORIAL
---------
+## Tutorial
 If you want to learn how to customize your vim, you can read my articles :
-- <a href="http://hatemegalaxy.blogspot.tw/2015/03/arch-linux-vim-configure-vim-on-arch.html" target="_blank">Configure Vim</a>
-- <a href="http://hatemegalaxy.blogspot.tw/2015/03/arch-linux-vim-vundle-install-vundle.html" target="_blank">Install Vundle, a Vim plugin manager</a>
-- <a href="http://hatemegalaxy.blogspot.tw/2015/03/arch-linux-vim-web-emmet-vim-install.html" target="_blank">Install Emmet-vim, which greatly improves HTML & CSS workflow</a>
-- <a href="http://hatemegalaxy.blogspot.tw/2015/03/arch-linux-vim-nerd-tree-install-nerd.html" target="_blank">Install NERD Tree for Vim</a>
+
+- <a href="https://zeckli.github.io/en/2016/11/18/install-syntastic-on-mac-en.html">Install Syntastic for Vim on Mac</a>
+
+- <a href="https://zeckli.github.io/en/2016/08/28/install-tagbar-on-mac-en.html">Install and use Tagbar on Mac</a>
+
+- <a href="https://zeckli.github.io/en/2016/08/27/install-nerdtree-tabs-en.html">Install NERDTree Tabs</a>
