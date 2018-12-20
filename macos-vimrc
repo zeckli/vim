@@ -1,0 +1,81 @@
+set nocompatible
+filetype off
+
+" Vundle's default settings:
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" Vundle's plugin list
+Plugin 'gmarik/Vundle.vim'
+Plugin 'bling/vim-airline'
+Plugin 'dracula/vim'
+Plugin 'elzr/vim-json'
+Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'mattn/emmet-vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'yggdroot/indentline'
+
+call vundle#end()
+filetype plugin indent on
+filetype indent off
+
+" General settings
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set number
+set hlsearch
+set encoding=utf-8
+set fileencoding=utf-8
+set list
+set listchars=tab:>-
+set backspace=2
+set mouse-=a
+syntax on
+
+" Vim color theme
+syntax enable
+set background=dark
+
+" High light unwanted spaces in end of line
+highlight ExtraWhitespace ctermbg=darkyellow guibg=darkcyan
+autocmd BufEnter * if &ft != 'help' | match ExtraWhitespace /\s\+$/ | endif
+autocmd BufEnter * if &ft == 'help' | match none /\s\+$/ | endif
+
+highlight ColorColumn ctermbg=magenta
+call matchadd('ColorColumn', '\%120v', 100)
+
+" NERDTree
+let NERDTreeShowHidden = 1
+let NERDTreeShowLineNumbers = 1
+let NERDTreeWinSize = 45
+
+" NERDTree-tabs
+" Open/close NERDTree Tabs with \t
+nmap <silent> <leader>t :NERDTreeTabsToggle<CR>
+" To have NERDTree always open on startup
+let g:nerdtree_tabs_open_on_console_startup = 1
+
+" Settings for JavaScript files
+autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
+
+" Settings for TypeScript files
+autocmd Filetype typescript setlocal ts=2 sts=2 sw=2
+
+" Settings for other stuff
+let g:vim_json_syntax_conceal = 0
+let g:indentLine_char = '¦'
+let g:airline_theme = 'dracula'
+
+" Disable beeping
+set noerrorbells visualbell t_vb=
+autocmd GUIEnter * set visualbell t_vb=
+
+" Set alias for saving
+fun! SetupCommandAlias(from, to)
+  exec 'cnoreabbrev <expr> '.a:from
+        \ .' ((getcmdtype() is# ":" && getcmdline() is# "'.a:from.'")'
+        \ .'? ("'.a:to.'") : ("'.a:from.'"))'
+endfun
+call SetupCommandAlias('W', 'w')
