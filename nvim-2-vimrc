@@ -1,0 +1,90 @@
+" Neovim configuration
+
+" -----------
+" | Plugins |
+" -----------
+call plug#begin('~/.config/nvim/plugged')
+  Plug 'preservim/nerdtree'
+  Plug 'rcarriga/nvim-notify'
+  Plug 'norcalli/nvim-colorizer.lua'
+  Plug 'luochen1990/rainbow'
+  Plug 'nvim-lua/plenary.nvim'
+  Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
+  Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+  Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
+call plug#end()
+
+
+" ------------
+" | NERDTree |
+" ------------
+let NERDTreeAutoDeleteBuffer = 1
+let NERDTreeMinimalUI = 1
+let NERDTreeShowHidden = 1
+let NERDTreeShowLineNumbers = 1
+
+" open once enter into nvim editor
+autocmd VimEnter * NERDTree
+" always make sure left window opened
+autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
+" close if NERDTree is the only window
+autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+
+
+" -----------
+" | Rainbow |
+" -----------
+let g:rainbow_active = 1
+autocmd VimEnter * RainbowToggle
+
+
+" -------------
+" | Telescope |
+" -------------
+fun! FindFile()
+  execute ':Telescope find_files'
+endfun
+command! Ff call FindFile()
+cnoreabbrev ff Ff
+
+fun! FindByGrep()
+  execute ':Telescope live_grep'
+endfun
+command! Fg call FindByGrep()
+cnoreabbrev fg Fg
+
+
+" ---------------
+" | Preferences |
+" ---------------
+filetype plugin indent on
+syntax on
+set clipboard+=unnamed
+set number
+set encoding=utf-8
+set fileencoding=utf-8
+set splitbelow
+set title
+set autoindent
+set expandtab
+set shiftwidth=2
+set tabstop=2
+nnoremap \ :nohl<return>
+
+
+" -----------------------
+" | Customzied Commands |
+" -----------------------
+" Copy all lines
+fun! CopyAllLines()
+  execute ':silent %w !pbcopy'
+  echo 'Copied all lines!'
+endfun
+command! Cp call CopyAllLines()
+cnoreabbrev cp Cp
+
+" Save files
+fun! SaveFile()
+  execute ':w'
+endfun
+command! W call SaveFile()
